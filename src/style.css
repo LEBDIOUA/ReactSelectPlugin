@@ -1,0 +1,97 @@
+.custom-select {
+  background-color: white;
+  width: 300px;
+  font-size: 16px;
+  align-content: center;
+}
+
+.select-selected {
+  background-color: white;
+  height: 100%;
+  width: 100%;
+  font-size: 16px;
+  align-content: center;
+}
+.select-items {
+  background-color: white;
+  height: 150px;
+}
+
+.custom-select {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.select-selected {
+  padding: 5px;
+  user-select: none;
+}
+
+.select-selected,
+.select-items {
+  border: 1px solid grey;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 14px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: grey transparent transparent transparent;
+}
+
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent black transparent;
+  top: 7px;
+}
+.select-arrow-active {
+  border: 2px solid black !important;
+}
+
+.select-items {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  width: 100%;
+  max-height: 150px;
+  overflow: auto;
+}
+
+.select-items div {
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+.select-items div:hover {
+  background-color: #daef90;
+}
+
+.select-hide {
+  display: none;
+}
+
+.select-disabled {
+  color: #00000061;
+}
+
+.select-items div.select-disabled:hover {
+  background-color: transparent;
+  cursor: default;
+}
+
+.select-items-above {
+  top: auto;
+  bottom: 100%;
+}
+
+.placeHolder {
+  color: gray;
+}
